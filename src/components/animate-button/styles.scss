@@ -1,0 +1,51 @@
+.animate-button{
+    button{
+        height: 100px;
+        width: 300px;
+        position: absolute;
+        margin: auto;
+        background-color: #17181d;
+        border: 6px solid #17181d;
+        color: #9fdbbe;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 6px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        cursor: pointer;
+        outline: none;
+        transition: all 1.5s ease;
+        &:hover{
+            color: #17fa8e;
+            border: 6px solid #17fa8e;
+            &:before, &:after{
+                width: 0;
+                height: 6px;
+                transition: height 0.5s, width 0.5s 0.5s;
+            }
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            height: 35px;
+            width: 300px;
+            background-color: #17181d;
+            margin: auto;
+            left: -6px;
+            right: 0;
+            bottom: -6px;
+            transition: width 0.5s, height 0.5s 0.5s;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            height: 35px;
+            width: 300px;
+            background-color: #17181d;
+            margin: auto;
+            top: -6px;
+            right: 0;
+            left: -6px;
+            transition: width 0.5s, height 0.5s 0.5s;
+        }
+    }
+}
