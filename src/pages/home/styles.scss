@@ -1,0 +1,84 @@
+.home{
+    *{
+        color: white;
+    }
+    background: #f2f2f2;
+    
+    nav{
+        background: #1b1b1b;
+        &:after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .logo{
+            float: left;
+            color: white;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 70px;
+            padding-left: 60px;
+        }
+        ul{
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            margin-bottom: 0;
+            padding: 0;
+            position: relative;               
+            li{
+                width: 150px;; 
+                float: left;
+                background:#1b1b1b;                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    line-height: 70px;
+                    font-style: 18px;
+                    padding: 8px 15px;
+                    &:hover{
+                        color: cyan;
+                        border-radius: 5px;
+                        box-shadow: 0 0 5px #33ffff,0 0 5px #66ffff;
+                        
+                    }
+                }
+                &:hover >
+                    ul{
+                        top: 70px;
+                        opacity: 1;
+                        visibility: visible;
+                        border-top: 3px solid cyan;
+                    }
+                
+                ul{                    
+                    position: absolute;
+                    top: 90px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+                    li{
+                        position: relative;
+                        margin: 0;
+                        width: 150px;
+                        float: none;
+                        display: list-item;
+                        border-bottom: 1px solid rgba(0,0,0.3);
+                        a:hover{
+                            color: cyan;
+                            box-shadow: none;
+                        }
+                        ul{
+                            li{
+                                position: relative;
+                                top: -70px;
+                                left: 150px;
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+        
+    }
+}
